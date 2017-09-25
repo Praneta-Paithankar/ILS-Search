@@ -33,8 +33,8 @@ public class generateIndex {
 	public static void main(String args[]) {
 		try {
 			Parser parser = new Parser();
-			//Directory dir = FSDirectory.open(Paths.get(System.getProperty("user.dir"), "Index"));
-			Directory dir = FSDirectory.open(Paths.get("/Users/praneta/Desktop/Search/Index"));
+			Directory dir = FSDirectory.open(Paths.get(System.getProperty("user.dir"), "Index"));
+			//Directory dir = FSDirectory.open(Paths.get("/Users/praneta/Desktop/Search/Index"));
 			//KeywordAnalyzer analyzer=new KeywordAnalyzer();
 			//Analyzer analyzer = new StandardAnalyzer();
 			//Analyzer analyzer=new SimpleAnalyzer();

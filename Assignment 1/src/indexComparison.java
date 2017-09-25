@@ -13,8 +13,8 @@ import org.apache.lucene.util.BytesRef;
 public class indexComparison {
 	public static void main(String args[]) {
 		try {
-			IndexReader reader = DirectoryReader.open(FSDirectory.open(Paths.get("/Users/praneta/Desktop/Search/Index")));
-			
+			//IndexReader reader = DirectoryReader.open(FSDirectory.open(Paths.get("/Users/praneta/Desktop/Search/Index")));
+			IndexReader reader = DirectoryReader.open(FSDirectory.open(Paths.get(System.getProperty("user.dir"), "Index")));
 			// Print the total number of documents in the corpus
 			System.out.println("Total number of documents in the corpus: " + reader.maxDoc());
 			// Print the size of the vocabulary for <field>TEXT</field>, applicable when the
