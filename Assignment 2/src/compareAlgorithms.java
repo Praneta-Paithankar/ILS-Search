@@ -37,7 +37,7 @@ public class compareAlgorithms {
 	public static void main(String[] args) {
 		try {
 			IndexReader reader= DirectoryReader
-					.open(FSDirectory.open(Paths.get("/Users/praneta/Desktop/Search/Assignments/Assignment2/index")));
+					.open(FSDirectory.open(Paths.get(System.getProperty("user.dir"), "Index")));
 			IndexSearcher searcher = new IndexSearcher(reader);
 			Parser parser1 = new Parser();
 			List<QueryDetails> queries = parser1.getQueryDetails();
