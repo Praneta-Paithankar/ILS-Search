@@ -116,8 +116,7 @@ public class searchTRECtopics {
 	}
 	public static void main(String[] args) {
 		try {
-			reader= DirectoryReader
-					.open(FSDirectory.open(Paths.get(System.getProperty("user.dir"), "index")));
+			reader= DirectoryReader.open(FSDirectory.open(Paths.get(System.getProperty("user.dir"), "index")));
 			searcher = new IndexSearcher(reader);
 			analyzer = new StandardAnalyzer();
 			total_doc = reader.maxDoc();
