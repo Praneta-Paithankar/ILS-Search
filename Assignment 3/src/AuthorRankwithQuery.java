@@ -33,7 +33,7 @@ public class AuthorRankwithQuery {
 	public static Map<String, Double> authorMap;
 
 	public static void main(String[] args) {
-		String queryString = "“Information Retrieva";
+		String queryString = "Information Retrieval";
 		calculatePriorProbability(queryString);
 		DirectedSparseGraph<String, String> graph = createGraph();
 		double alpha=0.15;
