@@ -27,6 +27,7 @@ public class AuthorRank {
 		for (String v : graph.getVertices()) {
 			verticesMap.put(v, ranker.getVertexScore(v));
 		}
+		//Print top 10 authors
 		verticesMap = sortByValue(verticesMap);
 		Iterator<Entry<String, Double>> iterator=verticesMap.entrySet().iterator();
 		for (int j=0;j<10;j++) {

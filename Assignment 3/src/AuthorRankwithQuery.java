@@ -33,17 +33,20 @@ public class AuthorRankwithQuery {
 	public static Map<String, Double> authorMap;
 
 	public static void main(String[] args) {
-		String queryString = "“Information Retrieva";
+		String queryString = "Information Retrieval";
 		calculatePriorProbability(queryString);
 		DirectedSparseGraph<String, String> graph = createGraph();
 		double alpha=0.15;
+		//Execute page rank algorithm with priors
 		Transformer<String,Double>authorTransformer=MapTransformer.getInstance(authorMap);
 		PageRankWithPriors<String,String> pagerank=new PageRankWithPriors<String, String>(graph,authorTransformer, alpha);
 		pagerank.evaluate();
+		// get rank of each author
 		HashMap<String, Double> authorResultMap = new HashMap<String, Double>();
 		for (String v : graph.getVertices()) {
 			authorResultMap.put(v, pagerank.getVertexScore(v));
 		}
+		//Print top 10 authors for a given query
 		authorResultMap = sortByValue(authorResultMap);
 		Iterator<Entry<String, Double>> iterator=authorResultMap.entrySet().iterator();
 		for (int j=0;j<10;j++) {
