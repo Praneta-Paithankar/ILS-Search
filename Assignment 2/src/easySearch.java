@@ -115,7 +115,7 @@ public class easySearch {
 	public static void main(String[] args) {
 		try {
 			reader = DirectoryReader
-					.open(FSDirectory.open(Paths.get(System.getProperty("user.dir"), "index"));
+					.open(FSDirectory.open(Paths.get(System.getProperty("user.dir"), "index")));
 			searcher = new IndexSearcher(reader);
 			Query query = getPreprocessedQuery();
 			Map<String, Integer> docFreqMap = getDocumentFrequency(query);
